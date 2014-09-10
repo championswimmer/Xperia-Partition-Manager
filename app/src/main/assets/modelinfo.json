@@ -1,0 +1,21 @@
+[
+  {
+    "device": "amami",
+    "codenames": [
+      "amami",
+      "D5503",
+      "D5502",
+      "D5506",
+      "Xperia Z1 Compact"
+    ],
+    "boot": "boot",
+    "recovery": "FOTAKernel",
+    "ta": "TA",
+    "system": "system",
+    "data": "userdata",
+    "cache": "cache"
+  },
+  {
+    "device": "honami"
+  }
+]
