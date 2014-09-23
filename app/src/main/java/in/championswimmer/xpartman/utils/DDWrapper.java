@@ -7,11 +7,11 @@ import java.io.File;
  */
 public class DDWrapper {
 
-    public static void flashPart (Partition p, File image) {
+    public static void flashPart (String partitionPath, String imagePath) {
 
     }
 
-    public static void backupPart(Partition p, File image) {
+    public static void backupPart(String partitionPath, String imagePath) {
 
     }
 }

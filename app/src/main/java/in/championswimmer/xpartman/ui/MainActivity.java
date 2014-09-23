@@ -6,6 +6,7 @@ import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,14 +14,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 
+import org.json.JSONException;
+
+import java.io.IOException;
+
 import in.championswimmer.xpartman.R;
 import in.championswimmer.xpartman.ui.fragments.BackupFragment;
 import in.championswimmer.xpartman.ui.fragments.FlashFragment;
 import in.championswimmer.xpartman.ui.fragments.RestoreFragment;
+import in.championswimmer.xpartman.utils.ModelInfo;
 
 
 public class MainActivity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+
+    public ModelInfo modelInfo;
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -45,6 +53,13 @@ public class MainActivity extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+        try {
+            modelInfo = new ModelInfo(this);
+        } catch (Exception e) {
+            // Could not open local json file to inflate model info;
+            e.printStackTrace();
+        }
     }
 
     @Override

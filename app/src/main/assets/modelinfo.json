@@ -16,6 +16,53 @@
     "cache": "cache"
   },
   {
-    "device": "honami"
+    "device": "honami",
+    "codenames": [
+      "honami",
+      "C6903",
+      "C6902",
+      "C6906",
+      "C6943",
+      "Xperia Z1"
+    ],
+    "boot": "boot",
+    "recovery": "FOTAKernel",
+    "ta": "TA",
+    "system": "system",
+    "data": "userdata",
+    "cache": "cache"
+  },
+  {
+    "device": "togari",
+    "codenames": [
+      "togari",
+      "C6803",
+      "C6802",
+      "C6806",
+      "C6843",
+      "Xperia Z Ultra"
+    ],
+    "boot": "boot",
+    "recovery": "FOTAKernel",
+    "ta": "TA",
+    "system": "system",
+    "data": "userdata",
+    "cache": "cache"
+  },
+  {
+    "device": "yuga",
+    "codenames": [
+      "yuga",
+      "C6603",
+      "C6602",
+      "C6606",
+      "Xperia Z1 Compact"
+    ],
+    "boot": "boot",
+    "recovery": "FOTAKernel",
+    "ta": "TA",
+    "system": "system",
+    "data": "userdata",
+    "cache": "cache"
   }
 ]
