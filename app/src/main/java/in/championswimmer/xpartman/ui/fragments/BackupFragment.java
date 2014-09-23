@@ -7,6 +7,8 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import in.championswimmer.xpartman.R;
 
@@ -25,6 +27,10 @@ public class BackupFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    View mView;
+    Spinner backupPartitionSpinner;
+
 
 
     /**
@@ -61,7 +67,15 @@ public class BackupFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_backup, container, false);
+        mView = inflater.inflate(R.layout.fragment_backup, container, false);
+        backupPartitionSpinner = (Spinner) mView.findViewById(R.id.backup_partition_spinner);
+        backupPartitionSpinner.setAdapter(new ArrayAdapter<String>(
+                getActivity(),
+                android.R.layout.simple_spinner_item,
+                android.R.id.text1,
+                new String[] {"A", "b"} // TODO: Get read partition list from PartitionMap
+        ));
+        return mView;
     }
 
 

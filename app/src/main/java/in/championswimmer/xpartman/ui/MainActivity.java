@@ -28,7 +28,9 @@ import in.championswimmer.xpartman.utils.ModelInfo;
 public class MainActivity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
-    public ModelInfo modelInfo;
+    public static final String TAG = "MainActivity";
+
+    public static ModelInfo modelInfo;
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -56,9 +58,12 @@ public class MainActivity extends Activity
 
         try {
             modelInfo = new ModelInfo(this);
+            Log.i(TAG, "Using model "
+                    + modelInfo.getModelName()
+                    + " and properties of generic model " + modelInfo.getActualModelName());
         } catch (Exception e) {
             // Could not open local json file to inflate model info;
-            e.printStackTrace();
+            Log.e(TAG, "Could not load modelinfo ", e);
         }
     }
 

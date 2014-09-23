@@ -13,8 +13,19 @@ android {
     }
     buildTypes {
         release {
-            runProguard false
+            runProguard true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            runProguard false
+        }
+    }
+    productFlavors {
+        free {
+            applicationId "in.championswimmer.xpartman.free"
+        }
+        paid {
+            applicationId "in.championswimmer.xpartman.donate"
         }
     }
 }

@@ -24,6 +24,14 @@ public class ModelInfo {
     String partCache = "cache";
     String partSystem = "system";
 
+    public String getModelName() {
+        return model;
+    }
+
+    public String getActualModelName() {
+        return actualModel;
+    }
+
     public String getPartBoot() {
         return partBoot;
     }
